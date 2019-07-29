@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER='1.26.1'
+VER='1.26.3'
 DIR=~/Downloads
 MIRROR=https://api.bintray.com/content/jfrog/jfrog-cli-go/$VER
 
@@ -19,11 +19,11 @@ dl()
         wget -q -O $LFILE $URL
     fi
 
-    printf "  # %s\n" $URL
-    printf "  %s-%s: sha256:%s\n" $OS $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
+    printf "    # %s\n" $URL
+    printf "    %s-%s: sha256:%s\n" $OS $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
 }
 
-printf "'%s':\n" $VER
+printf "  '%s':\n" $VER
 dl linux amd64
 dl linux 386
 dl mac 386
