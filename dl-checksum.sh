@@ -1,26 +1,26 @@
 #!/usr/bin/env sh
-VER='1.28.0'
+VER=1.29.0
 DIR=~/Downloads
 MIRROR=https://api.bintray.com/content/jfrog/jfrog-cli-go/$VER
 
 
 dl()
 {
-    OS=$1
-    PLATFORM=$2
-    SUFFIX=${3:-}
-    UNVERFILE=jfrog-cli-$OS-$PLATFORM
-    URL="$MIRROR/$UNVERFILE/jfrog${SUFFIX}?bt_package=$UNVERFILE"
-    VERFILE=$UNVERFILE-$VER
-    LFILE=$DIR/$VERFILE
+    local os=$1
+    local arch=$2
+    local suffix=${3:-}
+    local unverfile=jfrog-cli-$os-$arch
+    local url="$MIRROR/$unverfile/jfrog${suffix}?bt_package=$unverfile"
+    local verfile=$unverfile-${VER}
+    local lfile=$DIR/$verfile
 
-    if [ ! -e $LFILE ];
+    if [ ! -e $lfile ];
     then
-        wget -q -O $LFILE $URL
+        wget -q -O $lfile $url
     fi
 
-    printf "    # %s\n" $URL
-    printf "    %s-%s: sha256:%s\n" $OS $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
+    printf "    # %s\n" $url
+    printf "    %s-%s: sha256:%s\n" $os $arch `sha256sum $lfile | awk '{print $1}'`
 }
 
 printf "  '%s':\n" $VER
