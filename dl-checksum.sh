@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=1.29.0
+VER=1.29.1
 DIR=~/Downloads
 MIRROR=https://api.bintray.com/content/jfrog/jfrog-cli-go/$VER
 
