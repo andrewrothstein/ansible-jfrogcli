@@ -1,5 +1,6 @@
 ---
 # vars file for jfrogcli
+jfrogcli_platform: '{{ jfrogcli_os }}-{{ jfrogcli_arch }}'
 jfrogcli_exe: jfrog{{ jfrogcli_exe_suffix | default("") }}
 jfrogcli_ver_exe: jfrog-{{ jfrogcli_ver }}
 jfrogcli_bt_package: jfrog-cli-{{ jfrogcli_platform }}

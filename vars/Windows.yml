@@ -1,3 +1,4 @@
 ---
 jfrogcli_exe_suffix: .exe
-jfrogcli_platform: windows-amd64
+jfrogcli_os: windows
+jfrogcli_arch: amd64

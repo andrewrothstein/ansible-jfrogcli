@@ -1,2 +1,3 @@
 ---
-jfrogcli_platform: mac-386
+jfrogcli_os: mac
+jfrogcli_arch: 386
