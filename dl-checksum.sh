@@ -1,17 +1,17 @@
 #!/usr/bin/env sh
-VER=${1:-1.30.0}
 DIR=~/Downloads
-MIRROR=https://api.bintray.com/content/jfrog/jfrog-cli-go/$VER
+MIRROR=https://api.bintray.com/content/jfrog/jfrog-cli-go
 
 
 dl()
 {
-    local os=$1
-    local arch=$2
-    local suffix=${3:-}
+    local ver=$1
+    local os=$2
+    local arch=$3
+    local suffix=${4:-}
     local unverfile=jfrog-cli-$os-$arch
-    local url="$MIRROR/$unverfile/jfrog${suffix}?bt_package=$unverfile"
-    local verfile=$unverfile-${VER}
+    local url="$MIRROR/$ver/$unverfile/jfrog${suffix}?bt_package=$unverfile"
+    local verfile=$unverfile-${ver}
     local lfile=$DIR/$verfile
 
     if [ ! -e $lfile ];
@@ -23,8 +23,13 @@ dl()
     printf "    %s-%s: sha256:%s\n" $os $arch `sha256sum $lfile | awk '{print $1}'`
 }
 
-printf "  '%s':\n" $VER
-dl linux amd64
-dl linux 386
-dl mac 386
-dl windows amd64 .exe
+dl_ver() {
+    local ver=$1
+    printf "  '%s':\n" $ver
+    dl $ver linux amd64
+    dl $ver linux 386
+    dl $ver mac 386
+    dl $ver windows amd64 .exe
+}
+
+dl_ver ${1:-1.30.2}
