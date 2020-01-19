@@ -3,7 +3,7 @@
 jfrogcli_mirror: https://api.bintray.com/content/jfrog/jfrog-cli-go
 jfrogcli_os: linux
 jfrogcli_arch: amd64
-jfrogcli_ver: '1.32.4'
+jfrogcli_ver: '1.33.0'
 jfrogcli_install_dir: /usr/local/bin
 
 jfrogcli_checksums:
@@ -142,3 +142,12 @@ jfrogcli_checksums:
     mac-386: sha256:cbd946828e9f5ac10dae11e8184e0d4e06a3d0ca284f9a45275f0b2a0ab67ff7
     # https://api.bintray.com/content/jfrog/jfrog-cli-go/1.32.4/jfrog-cli-windows-amd64/jfrog.exe?bt_package=jfrog-cli-windows-amd64
     windows-amd64: sha256:af69c967d9f3322f0e6f43b9d31ba3cfef6a54caea4bbbe5611d21ecc085474c
+  '1.33.0':
+    # https://api.bintray.com/content/jfrog/jfrog-cli-go/1.33.0/jfrog-cli-linux-amd64/jfrog?bt_package=jfrog-cli-linux-amd64
+    linux-amd64: sha256:1f90d0f117ee42fd023383aebdb87aa01eaf4fcc4e66c32eb82569d3698aa60c
+    # https://api.bintray.com/content/jfrog/jfrog-cli-go/1.33.0/jfrog-cli-linux-386/jfrog?bt_package=jfrog-cli-linux-386
+    linux-386: sha256:b35146e01bbd6126cb0dde2a12af0510b693a37c0dcf158009f3ed5b1e80750a
+    # https://api.bintray.com/content/jfrog/jfrog-cli-go/1.33.0/jfrog-cli-mac-386/jfrog?bt_package=jfrog-cli-mac-386
+    mac-386: sha256:7ec3249d866d59aee52b7e09506981197cca723498a0b450f48cae699008bfe2
+    # https://api.bintray.com/content/jfrog/jfrog-cli-go/1.33.0/jfrog-cli-windows-amd64/jfrog.exe?bt_package=jfrog-cli-windows-amd64
+    windows-amd64: sha256:54ee46d61c61070d0054eeb728a177076f8a9822ab8e986b7e41dffc690f90e5
