@@ -14,6 +14,8 @@ Role Variables
 
 See [defaults/main.yml](defaults/main.yml)
 
+> Note: If jfrogcli_installer is toggled between Homebrew (brew) and executable download (exe) mode, please make sure the executable is re-linked if you want to leverage the Homebrew version: `brew unlink jfrog-cli && brew link jfrog-cli`
+
 Dependencies
 ------------
 
