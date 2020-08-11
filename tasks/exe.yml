@@ -1,0 +1,15 @@
+---
+- name: download...
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{ jfrogcli_exe_url }}'
+    dest: '{{ jfrogcli_install_dir }}/{{ jfrogcli_ver_exe }}'
+    mode: 0755
+- name: link...
+  become: yes
+  become_user: root
+  file:
+    src: '{{ jfrogcli_install_dir }}/{{ jfrogcli_ver_exe }}'
+    dest: '{{ jfrogcli_install_dir }}/{{ jfrogcli_exe }}'
+    state: link

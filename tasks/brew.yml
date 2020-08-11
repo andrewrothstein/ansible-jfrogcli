@@ -1,0 +1,5 @@
+---
+- name: install brew package
+  homebrew:
+    name: jfrog-cli-go
+    state: present
