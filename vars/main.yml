@@ -3,6 +3,8 @@
 jfrogcli_platform: '{{ jfrogcli_os }}-{{ jfrogcli_arch }}'
 jfrogcli_exe: jfrog{{ jfrogcli_exe_suffix | default("") }}
 jfrogcli_ver_exe: jfrog-{{ jfrogcli_ver }}
+jfrogcli_target_exe: '{{ jfrogcli_install_dir }}/{{ jfrogcli_ver_exe }}'
+jfrogcli_target_link: '{{ jfrogcli_install_dir }}/{{ jfrogcli_exe }}'
 jfrogcli_bt_package: jfrog-cli-{{ jfrogcli_platform }}
 jfrogcli_exe_url: '{{ jfrogcli_mirror }}/{{ jfrogcli_ver }}/{{ jfrogcli_bt_package }}/{{ jfrogcli_exe }}?bt_package={{ jfrogcli_bt_package }}'
 jfrogcli_checksum: '{{ jfrogcli_checksums[jfrogcli_ver][jfrogcli_platform] }}'
