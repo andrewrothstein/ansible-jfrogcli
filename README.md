@@ -1,6 +1,7 @@
 andrewrothstein.jfrogcli
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-jfrogcli.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-jfrogcli)
+![Build Status](https://github.com/andrewrothstein/ansible-jfrogcli/actions/workflows/build.yml/badge.svg)
+
 
 Installs the [JFrog CLI](https://www.jfrog.com/confluence/display/CLI/JFrog+CLI)
 

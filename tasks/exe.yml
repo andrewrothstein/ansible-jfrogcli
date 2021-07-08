@@ -1,15 +1,15 @@
 ---
-- name: downloading {{ jfrogcli_exe_url }} to {{ jfrogcli_target_exe }}
+- name: downloading {{ jfrogcli_url }} to {{ jfrogcli_exe }}
   become: yes
   become_user: root
   get_url:
-    url: '{{ jfrogcli_exe_url }}'
-    dest: '{{ jfrogcli_target_exe }}'
+    url: '{{ jfrogcli_url }}'
+    dest: '{{ jfrogcli_exe }}'
     mode: 0755
-- name: linking {{ jfrogcli_target_link }} to {{ jfrogcli_target_exe }}
+- name: linking {{ jfrogcli_link }} to {{ jfrogcli_exe }}
   become: yes
   become_user: root
   file:
-    src: '{{ jfrogcli_target_exe }}'
-    dest: '{{ jfrogcli_target_link }}'
+    src: '{{ jfrogcli_exe }}'
+    dest: '{{ jfrogcli_link }}'
     state: link
