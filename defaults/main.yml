@@ -6,7 +6,7 @@ jfrogcli_arch: amd64
 jfrogcli_ver:
   major: 2
   minor: 8
-  patch: 1
+  patch: 3
 jfrogcli_install_dir: /usr/local/bin
 
 jfrogcli_checksums:
