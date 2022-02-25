@@ -20,7 +20,7 @@ dl()
 
     if [ ! -e $lfile ];
     then
-        wget -q -O $lfile $url
+        curl -sSLf -o $lfile $url
     fi
 
     printf "    # %s\n" $url
@@ -38,4 +38,4 @@ dl_ver() {
     dl $major_ver $minor_ver $patch_ver windows amd64 .exe
 }
 
-dl_ver 2 11 0
+dl_ver 2 12 1
