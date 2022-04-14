@@ -33,9 +33,10 @@ dl_ver() {
     local patch_ver=$3
     printf "  '%s.%s.%s':\n" $major_ver $minor_ver $patch_ver
     dl $major_ver $minor_ver $patch_ver linux amd64
+    dl $major_ver $minor_ver $patch_ver linux arm64
     dl $major_ver $minor_ver $patch_ver linux 386
     dl $major_ver $minor_ver $patch_ver mac 386
     dl $major_ver $minor_ver $patch_ver windows amd64 .exe
 }
 
-dl_ver 2 15 0
+dl_ver 2 15 1
