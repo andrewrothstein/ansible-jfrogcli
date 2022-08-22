@@ -5,7 +5,7 @@ jfrogcli_os: linux
 jfrogcli_arch: amd64
 jfrogcli_ver:
   major: 2
-  minor: 22
+  minor: 25
   patch: 0
 jfrogcli_install_dir: /usr/local/bin
 
@@ -377,3 +377,25 @@ jfrogcli_checksums:
     mac-386: sha256:4dd1c6b5144ce21346e5a2b3e975185538e76d373a1aef5d177292701fa9bc8c
     # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.22.0/jfrog-cli-windows-amd64/jfrog.exe
     windows-amd64: sha256:594518acc94acb258e7b9a374f572922fc359adc303f1c9d3164930e080b6e16
+  '2.24.3':
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.24.3/jfrog-cli-linux-amd64/jfrog
+    linux-amd64: sha256:87b64433209fe61b975a8a9ca0854bc3214cfaefa495140c0cc940bd6cd5bb95
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.24.3/jfrog-cli-linux-arm64/jfrog
+    linux-arm64: sha256:9bd7f44caaf6f097dfde3f418b544f3e838d8d7368093d1ae540034b62cfdb52
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.24.3/jfrog-cli-linux-386/jfrog
+    linux-386: sha256:3bd730e20bc8176d8b0bd71c8a15867a8f2f470714e721ef998d47b0f48219f9
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.24.3/jfrog-cli-mac-386/jfrog
+    mac-386: sha256:f4eb2e6dce029b5c7d7c490e19e962b2b564d6b1d1170b5728830c7515b09390
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.24.3/jfrog-cli-windows-amd64/jfrog.exe
+    windows-amd64: sha256:07c7f351002e59acea61f9c7548a6851c617f9c0c524911c24d5846b8f0730d9
+  '2.25.0':
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.25.0/jfrog-cli-linux-amd64/jfrog
+    linux-amd64: sha256:c94f8c7af4faa12d3b8dc13a89989504c471b3c57659d2adb95627a383b57c87
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.25.0/jfrog-cli-linux-arm64/jfrog
+    linux-arm64: sha256:c1dcbe23406402737c76207469cd2410491f670b24f6e05fa3304806e72ac45e
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.25.0/jfrog-cli-linux-386/jfrog
+    linux-386: sha256:3971bec9fca491daa9256d62e8e97131c79e8fcd46025eaa709acdf13a7b21e2
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.25.0/jfrog-cli-mac-386/jfrog
+    mac-386: sha256:bf889a5b13f6f5421e3058537b61d04134042b6c51d12acc3bcb3c69785bfb16
+    # https://releases.jfrog.io/artifactory/jfrog-cli/v2/2.25.0/jfrog-cli-windows-amd64/jfrog.exe
+    windows-amd64: sha256:abbe6dd5da40f6b1434a21f102e4cbc091d1bca194f42a72102ece7b9916117a
