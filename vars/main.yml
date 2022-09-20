@@ -1,5 +1,7 @@
 ---
 # vars file for jfrogcli
+jfrogcli_os: '{{ ansible_system | lower }}'
+jfrogcli_arch: '{{ jfrogcli_arch_map[ansible_architecture] }}'
 jfrogcli_fq_ver: '{{ jfrogcli_ver.major }}.{{ jfrogcli_ver.minor }}.{{ jfrogcli_ver.patch }}'
 jfrogcli_platform: '{{ jfrogcli_os }}-{{ jfrogcli_arch }}'
 jfrogcli_filename: jfrog{{ jfrogcli_exe_suffix | default("") }}
