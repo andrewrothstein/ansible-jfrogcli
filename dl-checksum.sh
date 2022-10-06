@@ -36,7 +36,8 @@ dl_ver() {
     dl $major_ver $minor_ver $patch_ver linux arm64
     dl $major_ver $minor_ver $patch_ver linux 386
     dl $major_ver $minor_ver $patch_ver mac 386
+    dl $major_ver $minor_ver $patch_ver mac arm64
     dl $major_ver $minor_ver $patch_ver windows amd64 .exe
 }
 
-dl_ver 2 26 2
+dl_ver 2 27 1
