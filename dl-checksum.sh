@@ -40,4 +40,4 @@ dl_ver() {
     dl $major_ver $minor_ver $patch_ver windows amd64 .exe
 }
 
-dl_ver 2 30 0
+dl_ver 2 31 0
