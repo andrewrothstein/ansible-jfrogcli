@@ -1,22 +1,32 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.jfrogcli (v1)
+  hosts: all
   vars:
     jfrogcli_ver:
       major: 1
       minor: 49
       patch: 0
-  roles:
-  - role: '{{ playbook_dir }}'
   tasks:
-    - command: /usr/local/bin/jfrog --version
+    - name: Installing andrewrothstein.jfrogcli (v1)
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'jfrog --version'
+      ansible.builtin.command: /usr/local/bin/jfrog --version
+      changed_when: false
       register: jfrogcli_test_output
-    - debug:
+    - name: Output from 'jfrog --version'
+      ansible.builtin.debug:
         msg: '{{ jfrogcli_test_output.stdout }}'
-- hosts: all
-  roles:
-  - role: '{{ playbook_dir }}'
+- name: Testing andrewrothstein.jfrogcli (v2)
+  hosts: all
   tasks:
-    - command: /usr/local/bin/jfrog --version
+    - name: Installing andrewrothstein.jfrogcli (v2)
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'jfrog --version'
+      ansible.builtin.command: /usr/local/bin/jfrog --version
+      changed_when: false
       register: jfrogcli_test_output
-    - debug:
+    - name: Output from 'jfrog --version'
+      ansible.builtin.debug:
         msg: '{{ jfrogcli_test_output.stdout }}'

@@ -1,15 +1,15 @@
 ---
-- name: downloading {{ jfrogcli_url }} to {{ jfrogcli_exe }}
+- name: Downloading {{ jfrogcli_url }} to {{ jfrogcli_exe }}
   become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ jfrogcli_url }}'
     dest: '{{ jfrogcli_exe }}'
-    mode: 0755
-- name: linking {{ jfrogcli_link }} to {{ jfrogcli_exe }}
+    mode: '755'
+- name: Linking {{ jfrogcli_link }} to {{ jfrogcli_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ jfrogcli_exe }}'
     dest: '{{ jfrogcli_link }}'
     state: link
